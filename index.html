@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>PictureTime</title>
+		
+		<script src="external/matchmedia.js"></script>
+		<script src="pictureTime.js"></script>
+		<style>
+			body { font-family: sans-serif }
+			img {  max-width: 100% }
+		</style>
+	</head>
+	<body>
+		
+		<h1>PictureTime: A &lt;picture&gt; element polyfill, building on <a href="http://github.com/scottjehl/picturefill">picturefill</a></h1>
+		
+		<picture alt="Photo: Tiger in tall grass" />
+	        <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x">
+	        <source media="(min-width: 700px)" srcset="external/imgs/medium.jpg 1x, external/imgs/mediumplus.jpg 2x" />
+	        <source media="(min-width: 900px)" srcset="external/imgs/large.jpg 1x, external/imgs/largeplus.jpg 2x" />
+	         
+	        <!-- noscript prevents the image from using resources unless JS fails -->
+	        <noscript>
+	            <img src="external/imgs/medium.jpg" />
+	        </noscript>
+    </picture>
+	</body>
+</html>
