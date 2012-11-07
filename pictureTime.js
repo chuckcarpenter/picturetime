@@ -32,7 +32,7 @@
             src = srcSets[_k];
             src = src.replace(/^\s*/, '').replace(/\s*$/, '').split(" ");
             resMatch = parseFloat(src[1], 10);
-            if (deviceRatio >= resMatch) {
+            if (deviceRatio === resMatch) {
               correctSrc = src[0];
               break;
             }

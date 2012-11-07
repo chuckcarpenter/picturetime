@@ -45,7 +45,7 @@ pictureTime = ->
                 for src in srcSets
                     src = src.replace(/^\s*/, '').replace(/\s*$/, '').split " "
                     resMatch = parseFloat src[1], 10
-                    if deviceRatio >= resMatch
+                    if deviceRatio is resMatch
                         correctSrc = src[0]
                         break
             else
