@@ -5,7 +5,7 @@
   pictureTime = function() {
     var correctSrc, deviceRatio, matches, media, pic, picImg, pictures, resMatch, sAttr, sources, src, srcSets, _i, _j, _k, _len, _len1, _len2, _results;
     pictures = document.getElementsByTagName("picture");
-    deviceRatio = window.devicePixelRatio;
+    deviceRatio = window.devicePixelRatio || 1;
     _results = [];
     for (_i = 0, _len = pictures.length; _i < _len; _i++) {
       pic = pictures[_i];
