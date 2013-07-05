@@ -12,13 +12,13 @@ Mark up your responsive images like this. Redundancy in commented source is for 
 
 ```html
 	<picture alt="Photo: Tiger in tall grass" />
-	        <!-- <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x"> -->
-	        <!-- <source media="(min-width: 700px)" srcset="external/imgs/medium.jpg 1x, external/imgs/mediumplus.jpg 2x" /> -->
-	        <!-- <source media="(min-width: 900px)" srcset="external/imgs/large.jpg 1x, external/imgs/largeplus.jpg 2x" /> -->
-	        <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x">
-	        <source media="(min-width: 700px)" srcset="external/imgs/medium.jpg 1x, external/imgs/mediumplus.jpg 2x" />
+		<!-- <source media="(min-width: 700px)" srcset="external/imgs/medium.jpg 1x, external/imgs/mediumplus.jpg 2x" /> -->
+		<!-- <source media="(min-width: 900px)" srcset="external/imgs/large.jpg 1x, external/imgs/largeplus.jpg 2x" /> -->
+		<!-- <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x"> -->
 	        <source media="(min-width: 900px)" srcset="external/imgs/large.jpg 1x, external/imgs/largeplus.jpg 2x" />
-	         
+	        <source media="(min-width: 700px)" srcset="external/imgs/medium.jpg 1x, external/imgs/mediumplus.jpg 2x" />
+	        <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x"> 
+	        
 	        <!-- IE8 or non support fallback -->
 	            <img src="external/imgs/medium.jpg" />
     </picture>
