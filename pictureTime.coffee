@@ -28,6 +28,8 @@ pictureTime = ->
             media = sAttr.getAttribute "media"
             if not media or window.matchMedia and window.matchMedia( media ).matches
                 matches.push sAttr
+                # once we find a match, we're done here
+                break
         
         picImg = pic.getElementsByTagName( "img" )[0]
         picImg.className += " Updated"
