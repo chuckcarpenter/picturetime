@@ -16,6 +16,7 @@
         media = sAttr.getAttribute("media");
         if (!media || window.matchMedia && window.matchMedia(media).matches) {
           matches.push(sAttr);
+          break;
         }
       }
       picImg = pic.getElementsByTagName("img")[0];
