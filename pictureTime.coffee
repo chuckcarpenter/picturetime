@@ -64,3 +64,9 @@ if window.addEventListener
     , false
     window.addEventListener "load", pictureTime, false
 else window.attachEvent "onload", pictureTime
+
+if typeof define is 'function'
+    define () ->
+        return pictureTime
+
+pictureTime()
