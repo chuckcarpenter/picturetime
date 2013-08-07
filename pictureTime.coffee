@@ -32,7 +32,7 @@ pictureTime = ->
                 break
         
         picImg = pic.getElementsByTagName( "img" )[0]
-        picImg.className += " Updated"
+        picImg.className += " Updated" if picImg
 
         if matches.length isnt 0 
             if not picImg
