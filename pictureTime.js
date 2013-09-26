@@ -29,9 +29,6 @@
         }
       }
       picImg = pic.getElementsByTagName("img")[0];
-      if (picImg) {
-        picImg.className += " Updated";
-      }
       if (matches.length !== 0) {
         if (!picImg) {
           picImg = document.createElement("img");
