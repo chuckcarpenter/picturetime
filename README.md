@@ -2,7 +2,7 @@
 
 A shot at a responsive images strategy that can be used today, it mimics the [proposed picture element](http://www.w3.org/community/respimg/wiki/Picture_Element_Proposal). Of course this is subject to change.
 
-This takes much from Scott Jehl's picturefill polyfill, but with the actual element. picturefill/)
+This takes much from Scott Jehl's [picturefill](https://github.com/scottjehl/picturefill) polyfill, but with the actual element.
 
 **Note:** PictureTime includes (externally) the [matchMedia polyfill](https://github.com/paulirish/matchMedia.js/) which makes matchMedia work in `media-query`-supporting browsers that don't have `matchMedia`, or at least allows media types to be tested in most any browser. `matchMedia` and the `matchMedia` polyfill are not required for `picturefill` to work, but they are required to support the `media` attributes on `picture` `source` elements.
 
