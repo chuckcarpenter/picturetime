@@ -20,7 +20,11 @@ Mark up your responsive images like this. Redundancy in commented source is for 
 	        <source srcset="external/imgs/small.jpg 1x, external/imgs/smallplus.jpg 2x"> 
 	        
 	        <!-- IE8 or non support fallback -->
-	            <img src="external/imgs/medium.jpg" />
+	            <img data-src="external/imgs/medium.jpg" />
     </picture>
 ```
+
+In order to prepare for the W3C's [resource priority specification](https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/ResourcePriorities/Overview.html), PictureTime has been built with support for the `postpone` attribute, which delays loading of media until that media is visible on screen. To enable this feature, simply add `postpone` as an attribute to any picture element. Alternatively, you can use `postpone="[true|false]"` to explicitly turn this feature on or off respectively.
+
+**Note:** If you are building a single-page app and your main content scrolls inside of a wrapper element rather than the window, then add `data-scroll-element="#myWrapper"` as an attribute to all the picture elements with the `postpone` attribute, where `#myWrapper` is some selector unique to the element in which the picture elements scroll.
 
