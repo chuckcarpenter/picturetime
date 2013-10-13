@@ -44,17 +44,18 @@ pictureTime = ->
 
             srcSets = matches.pop().getAttribute "srcset"
 
-            if deviceRatio and srcSets.indexOf( " 2x" ) isnt -1
-                srcSets = srcSets.split ","
-                for src in srcSets
-                    src = src.replace( /^\s*/, '' ).replace( /\s*$/, '' ).split " "
-                    resMatch = parseFloat src[ 1 ], 10
-                    if deviceRatio is resMatch
-                        correctSrc = src[ 0 ]
-                        break
-            else
-                correctSrc = srcSets
-            picImg.src = correctSrc
+            if srcSets
+                if deviceRatio and srcSets.indexOf( " 2x" ) isnt -1
+                    srcSets = srcSets.split ","
+                    for src in srcSets
+                        src = src.replace( /^\s*/, '' ).replace( /\s*$/, '' ).split " "
+                        resMatch = parseFloat src[ 1 ], 10
+                        if deviceRatio is resMatch
+                            correctSrc = src[ 0 ]
+                            break
+                else
+                    correctSrc = srcSets
+                picImg.src = correctSrc
 
         else if picImg then pic.removeChild picImg
 

@@ -39,21 +39,23 @@
           pic.appendChild(picImg);
         }
         srcSets = matches.pop().getAttribute("srcset");
-        if (deviceRatio && srcSets.indexOf(" 2x") !== -1) {
-          srcSets = srcSets.split(",");
-          for (_k = 0, _len2 = srcSets.length; _k < _len2; _k++) {
-            src = srcSets[_k];
-            src = src.replace(/^\s*/, '').replace(/\s*$/, '').split(" ");
-            resMatch = parseFloat(src[1], 10);
-            if (deviceRatio === resMatch) {
-              correctSrc = src[0];
-              break;
+        if (srcSets) {
+          if (deviceRatio && srcSets.indexOf(" 2x") !== -1) {
+            srcSets = srcSets.split(",");
+            for (_k = 0, _len2 = srcSets.length; _k < _len2; _k++) {
+              src = srcSets[_k];
+              src = src.replace(/^\s*/, '').replace(/\s*$/, '').split(" ");
+              resMatch = parseFloat(src[1], 10);
+              if (deviceRatio === resMatch) {
+                correctSrc = src[0];
+                break;
+              }
             }
+          } else {
+            correctSrc = srcSets;
           }
-        } else {
-          correctSrc = srcSets;
+          picImg.src = correctSrc;
         }
-        picImg.src = correctSrc;
       } else if (picImg) {
         pic.removeChild(picImg);
       }
