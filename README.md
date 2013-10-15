@@ -24,3 +24,4 @@ Mark up your responsive images like this. Redundancy in commented source is for 
     </picture>
 ```
 
+PictureTime will automatically watch your picture elements, so if you programatically change source child element or a src attribute, pictureTime will notice that something has changed and run itself to keep the photos fresh. By default, pictureTime watches the photos on the page twice a second.
