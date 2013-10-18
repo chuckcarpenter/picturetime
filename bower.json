@@ -1,0 +1,23 @@
+{
+  "name": "picturetime",
+  "main": "picturetime.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/natgeo/picturetime",
+  "authors": [
+    "Chuck Carpenter <chuck.carpenter@me.com>"
+  ],
+  "description": "A <picture> polyfill using the proposed <picture> syntax",
+  "keywords": [
+    "responsive",
+    "image",
+    "images",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "external",
+    "index.html",
+    "pictureTime.coffee"
+  ]
+}
