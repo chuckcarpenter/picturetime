@@ -39,7 +39,7 @@
           pic.appendChild(picImg);
         }
         srcSets = matches.pop().getAttribute("srcset");
-        if (srcSets) {
+        if (srcSets && srcSets.length) {
           if (deviceRatio && srcSets.indexOf(" 2x") !== -1) {
             srcSets = srcSets.split(",");
             for (_k = 0, _len2 = srcSets.length; _k < _len2; _k++) {

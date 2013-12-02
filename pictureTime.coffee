@@ -44,7 +44,7 @@ pictureTime = ->
 
             srcSets = matches.pop().getAttribute "srcset"
 
-            if srcSets
+            if srcSets and srcSets.length
                 if deviceRatio and srcSets.indexOf( " 2x" ) isnt -1
                     srcSets = srcSets.split ","
                     for src in srcSets
