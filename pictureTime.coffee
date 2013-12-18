@@ -1,19 +1,25 @@
-# pictureTime polyfill by Chuck Carpenter for National Geographic, 2012
+# pictureTime polyfill by 
+# Chuck Carpenter for National Geographic, 2012
 
 # much observed from the picturefill polyfill by Scott Jehl
 # http://github.com/scottjehl/picturefill
 
-# needed to change markup to respect actual picture element and double density photos
+# needed to change markup to respect actual 
+# picture element and double density photos
 
 pictureTime = ->
     pictures = document.getElementsByTagName "picture"
-    deviceRatio = window.devicePixelRatio or 1
+    # if Device Pixel Ratio exists, give us the whole number. 
+    # Otherwise, fall back to 1.
+    deviceRatio = if window.devicePixelRatio then Math.round window.devicePixelRatio else 1
+    if deviceRatio > 2 then deviceRatio is 2
 
     for pic in pictures
         matches = []
         sources = pic.getElementsByTagName "source"
 
-        # IE8 is not going to let us process srcset attr, return and let the fallback load
+        # IE8 is not going to let us process srcset attr, 
+        # return and let the fallback load
         if pic.innerHTML is ""
             if ( img = pic.getElementsByTagName( "img" )[ 0 ] ) and ( src = img.getAttribute "data-src" )
                 img.setAttribute "src", src
