@@ -12,7 +12,7 @@ pictureTime = ->
     # if Device Pixel Ratio exists, give us the whole number. 
     # Otherwise, fall back to 1.
     deviceRatio = if window.devicePixelRatio then Math.round window.devicePixelRatio else 1
-    if deviceRatio > 2 then deviceRatio is 2
+    if deviceRatio > 2 then deviceRatio = 2
 
     for pic in pictures
         matches = []

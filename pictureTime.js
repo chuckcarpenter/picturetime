@@ -6,7 +6,7 @@
     pictures = document.getElementsByTagName("picture");
     deviceRatio = window.devicePixelRatio ? Math.round(window.devicePixelRatio) : 1;
     if (deviceRatio > 2) {
-      deviceRatio === 2;
+      deviceRatio = 2;
     }
     for (_i = 0, _len = pictures.length; _i < _len; _i++) {
       pic = pictures[_i];
